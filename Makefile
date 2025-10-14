@@ -31,14 +31,15 @@
 # Compiler and flags
 CC = clang
 CFLAGS = -Wall -Wextra -std=gnu2y -g -Iheaders
-
+DELCMD = del
 # Source and object files
 SRC = src/main.c src/knights_tour.c
 OBJ = $(SRC:.c=.o)
-
+DEL =  .\src\knights_tour.o  .\src\main.o
+OBJ1 = ./main.exe
 # Target executable
 TARGET = main
-
+TARGET1 = go
 all: $(TARGET)
 
 
@@ -46,6 +47,8 @@ all: $(TARGET)
 $(TARGET): $(OBJ)
 	$(CC) $(CFLAGS) -o $@ $(OBJ)
 
-clean:
-	del src/knights_tour.o
+$(TARGET1): $(OBJ1)
+	$(OBJ1)
 
+clean:
+	$(DELCMD) $(DEL)
