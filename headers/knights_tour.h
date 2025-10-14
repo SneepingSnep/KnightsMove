@@ -1,6 +1,7 @@
 #include "stdio.h"
+#include <stddef.h>
 #define SIZE 8 /**< Board size. */
-typedef unsigned int board_t[SIZE][SIZE];
+typedef size_t board_t[SIZE][SIZE];
 
 // /**
 //  * Knight move offsets
