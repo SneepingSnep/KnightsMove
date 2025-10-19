@@ -4,3 +4,7 @@ In this assignment i have tried to implement a greedy algorithm that does not, t
 The way i run this program is using a Makefile that runs  partly on a linux and partly on a windows machine.
 "make main" for compiling the code and after "make go" for running it. the "make clean" only works on windows
 For trying a different size board you change the definition in the knight_tour.h file
+
+I have used a static array for counting up how many times a square has been visited
+I have used an stack based array when doing the individual tours
+And then again another stack based array for the solution matrix
