@@ -3,17 +3,6 @@
 #define SIZE 8 /**< Board size. */
 typedef size_t board_t[SIZE][SIZE];
 
-/**
- * Knight move offsets
- *
- * Moves that a knight can make relative to the current position.
- * For example,
- * x += MOVES_X[0]; y += MOVES_Y[0]
- * corresponds to one of the eight moves that a knight can make, where `x`
- and
- * `y` represent the current position.
- */
-
 /** Determines whether a move is possible from a starting position.
  *
  * @param move_id One of the 8 moves that the knight wants to make [0, 7]
@@ -23,7 +12,7 @@ typedef size_t board_t[SIZE][SIZE];
  * value is positive, then the corresponding field was visited before.
  * @return True if the move is possible, else false.
  */
-bool move_is_possible(size_t move_id, size_t *x, size_t *y, board_t visited);
+bool move_is_possible(size_t move_id, size_t x, size_t y, board_t visited);
 
 /** Attempts a tour by picking the first accessible square.
  *
