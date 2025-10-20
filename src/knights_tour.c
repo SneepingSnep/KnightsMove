@@ -33,12 +33,12 @@ void printBoard(board_t board) {
 unsigned int tour_greedy(size_t start_x, size_t start_y) {
   board_t chessarrvisited = {};
   size_t count = 1;
-  bool fuck = 1;
+  bool Running = 1;
   size_t xCord = start_x;
   size_t yCord = start_y;
   chessarrvisited[start_x][start_y] = 1;
   visitedArr[start_x][start_y] += 1;
-  while (fuck) {
+  while (Running) {
     for (size_t moves = 0; moves < MOVE_COUNT; moves++) {
       bool possible = move_is_possible(moves, xCord, yCord, chessarrvisited);
       if (possible) {
